@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #c9ebff;
+}
 .container {
     max-width: 1450px;  
     width: 100%;        
@@ -64,6 +69,44 @@
     width: 60%;
 }
 
+.banner_img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* < !-- **********************OUR Plant****************** --> */
+.plant {
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.plant_titel {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.plant_description {
+    color: darkslategrey;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.card_Container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* justify-content: space-between; */
+     justify-content: flex-start;
+}
+
+.card {
+    flex: 0 0 calc(25% - 15px);
+    background-color: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
 
 
 /* *********************************************RASPONSIVE********************************************* */
@@ -83,5 +126,27 @@
     .banner_discription {
         width: 100%; 
     }
+    .banner_img {
+        width: 100%;
+        display: block;
+    }
+
+    /* Card Section */
+    .card {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+}
+
+
+/* *****************************COMMON CSS *************** */
+.btn{
+    background-color: #E95A08;
+    padding: 10px 15px;
+    border: none;
+}
+
+span{
+    color: #E95A08;
 }
 
