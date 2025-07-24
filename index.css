@@ -121,7 +121,7 @@ body {
 .overly_img {
     position: absolute;
     top: -3px;
-    left: 44%;
+    left: 42%;
     transform: translateX(-50%);
     height: 132px;
     z-index: 10;
@@ -153,6 +153,120 @@ body {
 .challange_wrapper {
     flex: 1 1 50%;
 }
+
+/* ******************************Latest  Deals PART************** */
+
+.content_text {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.letest_titel {
+    font-size: 2.8rem;
+}
+
+.letest_description {
+    color: rgb(132, 126, 126);
+    font-size: 18px;
+}
+
+.letest_img {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 auto;
+
+}
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.text-over,
+.letest_btn {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.text-over {
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.letest_btn {
+    bottom: 20px;
+    left: 20px;
+    padding: 8px 15px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hover effect for desktop */
+.img-box:hover .text-over,
+.img-box:hover .letest_btn,
+.right_img:hover .text-over,
+.right_img:hover .letest_btn {
+    opacity: 1;
+}
+
+.right_img {
+    position: relative;
+    /* Overlay ঠিক মতো বসানোর জন্য */
+    overflow: hidden;
+}
+
+/* right_img-এর ভেতরের overlay টেক্সট আর বাটন */
+.right_img .text-over,
+.right_img .letest_btn {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.right_img .text-over {
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.right_img .letest_btn {
+    bottom: 106px;
+    left: 29px;
+    padding: 8px 15px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hover effect for desktop */
+.right_img:hover .text-over,
+.right_img:hover .letest_btn {
+    opacity: 1;
+}
+
+
+
+
+
 
 /* *********************************************RASPONSIVE********************************************* */
 @media screen and (max-width: 767px) {
@@ -208,20 +322,50 @@ body {
         max-width: 100%;
         height: auto;
     }
-}
 
-.overly_img {
-    display: none;
-}
+    /* Latest Deals */
 
-.overly_img img {
+    .letest_img {
+    flex-direction: column;
+  }
+
+  .left_img,
+  .right_img,
+  .img-box {
     width: 100%;
+  }
+
+  .left_img,
+  .right_img {
+    display: block;
+  }
+
+  .left_img .img-box img,
+  .right_img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .right_img .letest_btn {
+  bottom: 12px;
+  left: 29px;
+  }
+  
+  .text-over,
+  .letest_btn {
+    opacity: 1 !important;
+  }
+
+    .right_img .text-over,
+    .right_img .letest_btn {
+        opacity: 1 !important;
+    }
 }
 
 
 
 
-}
+
 
 
 /* *****************************COMMON CSS *************** */
