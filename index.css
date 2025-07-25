@@ -391,10 +391,16 @@ body {
         display: block;
     }
 
-    /* Card ******* */
+    /* Card ****************** */
     .card {
         flex: 0 0 calc(50% - 10px);
     }
+
+    .card .btn{
+        font-size: 0.5rem;
+        font-weight: 700;
+    }
+
 
     .card_Container {
         grid-template-columns: repeat(2, 1fr);
